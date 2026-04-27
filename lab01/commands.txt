@@ -1,0 +1,10 @@
+make
+ls *.ko
+sudo insmod EX02.ko
+sudo insmod EX03_provider.ko
+sudo insmod EX03_consumer.ko
+dmesg | tail -15
+sudo dmesg -c
+sudo rmmod EX02
+sudo rmmod EX03_provider 
+sudo rmmod EX03_consumer

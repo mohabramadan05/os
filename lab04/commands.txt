@@ -1,0 +1,25 @@
+ex04 ==>
+
+sudo insmod ex04.ko
+lsmod | grep ex04
+ls /sys/module/ex04/test2/
+cat /sys/module/ex04/test2/number
+echo 42 | sudo tee /sys/module/ex04/test2/number
+cat /sys/module/ex04/test2/number
+sudo dmesg | tail -20
+sudo rmmod ex04
+sudo dmesg | tail -5
+ls /sys/module/ex04/test2/
+
+ex05 ==>
+
+sudo insmod ex05.ko
+lsmod | grep ex05
+ls /sys/test2/
+cat /sys/test2/number
+echo 77 | sudo tee /sys/test2/number
+cat /sys/test2/number
+sudo dmesg | tail -20
+sudo rmmod ex05
+ls /sys/test2/
+

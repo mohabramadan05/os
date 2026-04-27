@@ -1,0 +1,20 @@
+ex01 ==>
+
+sudo insmod ex01.ko
+sudo dmesg | tail -60
+sudo rmmod ex01
+lsmod | grep ex01
+
+ex02 ==>
+
+sudo insmod ex02.ko
+--live output
+sudo dmesg -w
+--after
+sudo dmesg | tail -50
+--Confirm both threads are running
+ps aux | grep -E "producer|consumer"
+sudo rmmod ex2_producer_consumer_list
+sudo dmesg | tail -20
+lsmod | grep ex2
+
