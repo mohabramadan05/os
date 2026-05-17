@@ -1,0 +1,22 @@
+sudo insmod repeat_wq_mod.ko
+dmesg -w          # watch in real time, Ctrl+C to stop watching
+# wait a few seconds to see several runs...
+sudo rmmod repeat_wq_mod
+dmesg | tail -5   # see the final unload message
+
+
+# Build
+make
+
+# Load
+sudo insmod tasklet_stats_mod.ko
+
+# Read stats immediately (some may still be waiting)
+cat /proc/tasklet_stats
+
+# Read again after a moment (all executed)
+cat /proc/tasklet_stats
+
+# Unload (final stats printed to kernel log)
+sudo rmmod tasklet_stats_mod
+dmesg | tail -20

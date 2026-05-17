@@ -1,0 +1,5 @@
+# In each exercise directory:
+make
+sudo insmod stack_mod.ko      # or dlist_mod.ko
+sudo rmmod stack_mod          # triggers the destructor / prints output
+dmesg | tail -30              # see the kernel log output

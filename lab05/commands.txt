@@ -4,6 +4,9 @@ sudo insmod ex04.ko
 sudo dmesg | tail -60
 sudo rmmod ex04
 lsmod | grep ex04
+...
+
+.
 
 ex05 ==>
 
