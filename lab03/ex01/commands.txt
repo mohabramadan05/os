@@ -1,0 +1,7 @@
+terminal a 
+./userspace_app
+terminal b 
+sudo insmod procinfo_module.ko
+dmesg | tail -50
+sudo rmmod procinfo_module     # Terminal B
+# Then press q in Terminal A

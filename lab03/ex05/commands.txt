@@ -1,0 +1,4 @@
+sudo insmod ex05.ko strings="Apple","Banana","Cherry","Date"
+dmesg | tail -20
+sudo rmmod ex05
+dmesg | tail -10

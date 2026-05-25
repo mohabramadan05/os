@@ -1,0 +1,4 @@
+sudo insmod ex08.ko
+dmesg | tail -60
+sudo rmmod ex08
+dmesg | tail -20

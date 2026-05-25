@@ -1,0 +1,5 @@
+
+sudo insmod ex04.ko strings="Hello","Kernel","OS_Lab"
+dmesg | tail -20
+sudo rmmod ex04
+dmesg | tail -10
