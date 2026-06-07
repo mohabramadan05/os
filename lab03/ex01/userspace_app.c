@@ -2,7 +2,7 @@
 #include <unistd.h>
 
 int main(void)
-{
+{  
     int c;
 
     printf("User-space process:\n");

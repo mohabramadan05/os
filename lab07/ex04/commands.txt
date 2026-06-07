@@ -1,0 +1,5 @@
+
+sudo insmod ex04.ko          
+dmesg | tail -5              
+sudo rmmod ex04              
+dmesg | tail -5               

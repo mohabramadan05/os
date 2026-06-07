@@ -1,0 +1,5 @@
+
+sudo insmod task5.ko          
+dmesg -w -d                  
+sudo rmmod task5             
+dmesg | tail -20

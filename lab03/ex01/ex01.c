@@ -24,7 +24,6 @@ static const char *decode_state(unsigned int state)
     return "UNKNOWN";
 }
 
-/* ── Print everything interesting from task_struct ─────────────── */
 static void print_task_info(struct task_struct *t)
 {
     struct mm_struct *mm;
@@ -46,7 +45,7 @@ static void print_task_info(struct task_struct *t)
 
     /* --- State --- */
     pr_info("State (raw)   : %u  (%s)\n",
-            (unsigned int)t->__state, decode_state(t->__state));
+            (unsigned int)t->state, decode_state(t->state));
 
     /* --- Scheduling --- */
     pr_info("Policy        : %u  (%s)\n",  t->policy,
